@@ -10,11 +10,8 @@ public class BinsTest {
     public void createBins() {
         Bins bin = new Bins(2,12);
         bin.createBins();
-
         Boolean actual = (bin.binMap.size()) == 11;
-
         Assert.assertTrue(actual);
-
     }
 
     @Test
