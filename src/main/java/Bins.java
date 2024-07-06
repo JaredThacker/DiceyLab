@@ -2,14 +2,21 @@ import java.util.HashMap;
 
 public class Bins {
 
+    int low;
+    int high;
+
     static HashMap<Integer, Integer> binMap;
 
     public Bins(Integer low, Integer high){
+        this.low = low;
+        this.high = high;
+    }
+
+    public void createBins(){
         this.binMap = new HashMap<Integer, Integer>();
         for(Integer key = low; key <= high; key++){
             binMap.put(key, 0);
         }
-        System.out.println(binMap);
     }
 
     public void incrementBin(Integer key){
